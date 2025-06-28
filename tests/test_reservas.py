@@ -1,4 +1,4 @@
-from app.reservas import verificarDisponibilidad
+import app 
 
 def testSalaDisponibilidad():
     reservas = [
@@ -7,7 +7,7 @@ def testSalaDisponibilidad():
     ]
 
     nueva = {"sala":"A", "hora":"12:00"}
-    assert verificarDisponibilidad(reservas, nueva) == True
+    assert app.verificarDisponibilidad(reservas, nueva) == True
 
 def testSalaNoDisponible():
     reservas = [
@@ -16,4 +16,4 @@ def testSalaNoDisponible():
     ]
 
     nueva = {"sala":"A", "hora":"11:00"}
-    assert verificarDisponibilidad(reservas, nueva) == False
+    assert app.verificarDisponibilidad(reservas, nueva) == False
